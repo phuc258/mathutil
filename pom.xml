@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.phuctd</groupId>
+    <artifactId>mathutil</artifactId>
+    <version>67.89</version>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+<!--    ĐÂY LÀ NƠI KHAI BÁO CÁC THƯ VIỆN LẬP TRÌNH MÌNH CẦN DÙNG
+TRONG APP - THƯ VIỆN LẬP TRÌNH - LIBRARY CHẲNG QUA LÀ CÁI FILE "NHỊ PHÂN" AI ĐÓ
+LÀM SẴN CHỨA 1 ĐỐNG CLASS VÀ CÁC HÀM CÓ SẴN CHO ANH EM DEV DÙNG TRONG CODE
+VÍ DỤ MÌNH CẦN EXPORT DATA RA FILE PDF HAY IMPORT TỪ EXCEL, TA SẼ TÌM THƯ VIỆN TRÊN
+MẠNG CÓ SẴN TÍNH NĂNG NÀY, TẢI VỀ, ADD VÀO PROJECT, IMPORT PACKAGE.CLASS TƯƠNG ỨNG ĐỂ GÕ CODE
+TÌM, TẢI, ADD, IMPORT, DÙNG (KHAI BÁO BIẾN, NEW OBJECT, CHẤM GỌI TÊN HÀNG
+THƯ VIỆN KỂ TỪ NAY VỀ SAU, GỌI TÊN MỚI: DEPENDENCY, TẢI DEPENDENCY VỀ,
+ ADD DEPENDENCY VÀO PROJECT, IMPORT DEPENDENCY
+-->
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>6.0.0-RC3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
