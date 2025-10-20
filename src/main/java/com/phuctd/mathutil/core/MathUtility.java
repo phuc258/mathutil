@@ -13,17 +13,38 @@ public class MathUtility {
     //0,20 -> boundary - biên giới của tập giá trị
     //       xích qua 1 xíu là sang vùng invalid boundary!!!
     //0, xích nhẹ sang trái 1 đơn vị, ko ổn, ko tính đc, -1 sao tính!!!!
+
+    //VIẾT HÀM THEO PHONG CÁCH ĐỆ QUY
+    //5! = 1.2.3.4.5 = 4!.5
+    //4! = 1.2.3.4 = 3!.4
+    //3! = 1.2.3 = 2!.3
+    //2! = 1.2 = 1!.2
+    //1! = 1
+    //KẾT LUẬN: N! = N x (N-1)! CTHUC ĐỆ QUY
+    //          RECURSION - GỌI LẠI CHÍNH MÌNH VỚI QUY MÔ NHỎ HƠN - BÚP BÊ NGA
     public static long getFactorial(int n) {
         if (n < 0 || n > 20) {
             // ném ngoại lệ , kèm câu chửi, và dừng hàm ngay, ko có value nào đc trả về
             throw new IllegalArgumentException("Invalid argument. N must be between 0..20");
         }
-
-        //biến trung gian để tính phép nhân
-        long result = 1;
-        for (int i = 2; i <= n; i++) {
-            result *= i; // result = result * i; //thuật toán heo đất, ốc bu nhồi thịt vào đây tiếp chiêu
-        }
-        return result;
+      if (n==1 || n==0) {
+          return 1;
+      }
+      return n * getFactorial(n-1);
     }
+    // KIỂM THỬ LẠI CODE ĐÃ TỐI ƯU - REGRESSION TESTING, TEST LẠI THỨ ĐÃ TỪNG TEST
+
+//    public static long getFactorial(int n) {
+//        if (n < 0 || n > 20) {
+//            // ném ngoại lệ , kèm câu chửi, và dừng hàm ngay, ko có value nào đc trả về
+//            throw new IllegalArgumentException("Invalid argument. N must be between 0..20");
+//        }
+//
+//        //biến trung gian để tính phép nhân
+//        long result = 1;
+//        for (int i = 2; i <= n; i++) {
+//            result *= i; // result = result * i; //thuật toán heo đất, ốc bu nhồi thịt vào đây tiếp chiêu
+//        }
+//        return result;
+//    }
 }
